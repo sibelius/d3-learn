@@ -1,0 +1,11 @@
+{
+  "source": "Monthly climate normals (rounded, illustrative)",
+  "units": { "temp_c": "°C", "precip_mm": "mm" },
+  "cities": [
+    { "id": "sao-paulo", "name": "São Paulo", "country": "Brazil", "hemisphere": "south", "color": "#2f9e44" },
+    { "id": "lisbon", "name": "Lisbon", "country": "Portugal", "hemisphere": "north", "color": "#e8590c" },
+    { "id": "toronto", "name": "Toronto", "country": "Canada", "hemisphere": "north", "color": "#1971c2" },
+    { "id": "sydney", "name": "Sydney", "country": "Australia", "hemisphere": "south", "color": "#ae3ec9" },
+    { "id": "reykjavik", "name": "Reykjavík", "country": "Iceland", "hemisphere": "north", "color": "#0c8599" }
+  ]
+}

@@ -1,0 +1,18 @@
+{"name":"flare","children":[
+ {"name":"analytics","children":[
+  {"name":"cluster","children":[{"name":"AgglomerativeCluster","value":3938},{"name":"CommunityStructure","value":3812},{"name":"HierarchicalCluster","value":6714},{"name":"MergeEdge","value":743}]},
+  {"name":"graph","children":[{"name":"BetweennessCentrality","value":3534},{"name":"LinkDistance","value":5731},{"name":"MaxFlowMinCut","value":7840},{"name":"ShortestPaths","value":5914},{"name":"SpanningTree","value":3416}]},
+  {"name":"optimization","children":[{"name":"AspectRatioBanker","value":7074}]}]},
+ {"name":"animate","children":[
+  {"name":"Easing","value":17010},{"name":"FunctionSequence","value":5842},
+  {"name":"interpolate","children":[{"name":"ColorInterpolator","value":2047},{"name":"DateInterpolator","value":1375},{"name":"MatrixInterpolator","value":2202},{"name":"NumberInterpolator","value":1382},{"name":"PointInterpolator","value":1675}]},
+  {"name":"Parallel","value":5176},{"name":"Scheduler","value":5593},{"name":"Transition","value":9201},{"name":"Tween","value":6006}]},
+ {"name":"data","children":[
+  {"name":"converters","children":[{"name":"DelimitedTextConverter","value":4294},{"name":"GraphMLConverter","value":9800},{"name":"JSONConverter","value":2220}]},
+  {"name":"DataField","value":1759},{"name":"DataSchema","value":2165},{"name":"DataSet","value":586},{"name":"DataSource","value":3331}]},
+ {"name":"display","children":[{"name":"DirtySprite","value":8833},{"name":"LineSprite","value":1732},{"name":"RectSprite","value":3623},{"name":"TextSprite","value":10066}]},
+ {"name":"scale","children":[{"name":"LinearScale","value":1316},{"name":"LogScale","value":3151},{"name":"OrdinalScale","value":3770},{"name":"QuantileScale","value":2435},{"name":"Scale","value":4268},{"name":"TimeScale","value":5833}]},
+ {"name":"util","children":[{"name":"Arrays","value":8258},{"name":"Colors","value":10001},{"name":"Geometry","value":10993},
+  {"name":"math","children":[{"name":"DenseMatrix","value":3165},{"name":"IMatrix","value":2815},{"name":"SparseMatrix","value":3366}]},
+  {"name":"Strings","value":22026}]}
+]}

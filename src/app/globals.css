@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbfaf8;
+  --foreground: #1c1b19;
+  --panel: #ffffff;
+  --border: #e6e3dd;
+  --muted: #6b6760;
+  --hover: #f1eee8;
+  --code-bg: #f5f3ef;
+  --accent: #e8590c;
+  --accent-text: #c2410c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121110;
+    --foreground: #ecebe8;
+    --panel: #1b1a18;
+    --border: #2e2c29;
+    --muted: #a19d95;
+    --hover: #26241f;
+    --code-bg: #1f1d1b;
+    --accent: #f76707;
+    --accent-text: #ffa94d;
+  }
 }
 
 @theme inline {
@@ -12,15 +33,42 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+/* D3 output always renders on a light "paper" surface so d3's defaults
+   (black text, currentColor axes) look the same in light and dark mode. */
+.d3-output {
+  background: #ffffff;
+  color: #1c1b19;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 14px;
+}
+.d3-output svg {
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Lesson prose */
+.lesson h1 { font-size: 2.25rem; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; }
+.lesson h2 { font-size: 1.5rem; font-weight: 750; margin: 2.75rem 0 0.75rem; letter-spacing: -0.01em; }
+.lesson h3 { font-size: 1.15rem; font-weight: 700; margin: 2rem 0 0.5rem; }
+.lesson p { margin: 0.9rem 0; line-height: 1.75; font-size: 16.5px; }
+.lesson ul:not(.not-prose ul) { list-style: disc; padding-left: 1.4rem; margin: 0.9rem 0; line-height: 1.75; }
+.lesson ol:not(.not-prose ol) { list-style: decimal; padding-left: 1.4rem; margin: 0.9rem 0; line-height: 1.75; }
+.lesson li { margin: 0.25rem 0; }
+.lesson a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.lesson :not(pre) > code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.86em;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+}
+.lesson strong { font-weight: 700; }
+.callout-body p { margin: 0.35rem 0; font-size: 15px; }
