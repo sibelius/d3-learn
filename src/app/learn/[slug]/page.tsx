@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { allLessons, getLesson, sections } from "@/lib/lessons";
 import { lessonComponents } from "@/lessons";
 import { LessonFooter } from "@/components/LessonFooter";
+import { pageMetadata } from "@/lib/og";
 
 export const dynamicParams = false;
 
@@ -13,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/learn/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const found = getLesson(slug);
-  return found ? { title: found.lesson.title, description: found.lesson.summary } : {};
+  return found ? pageMetadata(`/learn/${slug}`) : {};
 }
 
 export default async function LessonPage({ params }: PageProps<"/learn/[slug]">) {

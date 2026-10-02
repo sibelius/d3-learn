@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { allLessons, sections } from "@/lib/lessons";
 import { Playground } from "@/components/Playground";
+import { pageMetadata } from "@/lib/og";
+
+export const metadata = pageMetadata("/");
 
 const hello = `
 // Every example on this site is live. Edit me and press ⌘/Ctrl + Enter.
